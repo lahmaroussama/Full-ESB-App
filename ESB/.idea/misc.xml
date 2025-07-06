@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/discovery/pom.xml" />
+        <option value="$PROJECT_DIR$/config-server/pom.xml" />
+        <option value="$PROJECT_DIR$/user/pom.xml" />
+        <option value="$PROJECT_DIR$/messages/pom.xml" />
+        <option value="$PROJECT_DIR$/kafkaProducerDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/kafkaConsumerDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/transformation/pom.xml" />
+        <option value="$PROJECT_DIR$/appDemo1/pom.xml" />
+        <option value="$PROJECT_DIR$/appDemo_1/pom.xml" />
+        <option value="$PROJECT_DIR$/appDemo_2/pom.xml" />
+        <option value="$PROJECT_DIR$/appDemo_3/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/appDemo1/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="ms-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
+  </component>
+</project>

@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: appDemo_3
+  kafka:
+    producer:
+      bootstrap-servers: localhost:29092
+    consumer:
+      bootstrap-servers: localhost:29092
+      group-id: b725f72-3292-4cec-a55b-bb7cb80dcc44
+      properties:
+        request.timeout.ms: 2147483647
+server:
+  port: 8558
+
+#Consume messages that has the key app_3 and send messages to app_2

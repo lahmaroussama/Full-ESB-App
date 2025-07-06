@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="appDemo_2" />
+        <module name="config-server" />
+        <module name="appDemo_1" />
+        <module name="discovery" />
+        <module name="messages" />
+        <module name="transformation" />
+        <module name="user" />
+        <module name="gateway" />
+        <module name="appDemo_3" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="appDemo1" target="17" />
+      <module name="kafkaConsumerDemo" target="17" />
+      <module name="kafkaProducerDemo" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="appDemo1" options="-parameters" />
+      <module name="appDemo_1" options="-parameters" />
+      <module name="appDemo_2" options="-parameters" />
+      <module name="appDemo_3" options="-parameters" />
+      <module name="config-server" options="-parameters" />
+      <module name="discovery" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="kafkaConsumerDemo" options="-parameters" />
+      <module name="kafkaProducerDemo" options="-parameters" />
+      <module name="messages" options="-parameters" />
+      <module name="transformation" options="-parameters" />
+      <module name="user" options="-parameters" />
+    </option>
+  </component>
+</project>

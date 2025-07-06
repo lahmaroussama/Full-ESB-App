@@ -1,0 +1,38 @@
+<div class="dashboard-grid">
+  <div *ngFor="let app of apps; let i = index" class="app-summary-card" [ngStyle]="{'background': app.color}" (click)="expandCard(app.id)">
+    <svg class="wave-bg" viewBox="0 0 400 80" preserveAspectRatio="none">
+      <path d="M0,40 Q100,80 200,40 T400,40 V80 H0 Z" [attr.fill]="app.statusColor + '22'"></path>
+    </svg>
+    <div class="card-content">
+      <div class="card-header">
+        <div class="left">
+          <mat-icon class="app-icon">apps</mat-icon>
+          <div class="app-info">
+            <div class="app-name">AppDemo{{ app.id }}</div>
+            <div class="app-desc">{{ app.name }}</div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="status-badge" [ngStyle]="{'background': app.statusColor, 'color': '#fff'}">
+            {{ app.status }}
+          </div>
+        </div>
+      </div>
+      <div class="expand-section" *ngIf="expandedAppId === app.id" (click)="$event.stopPropagation()">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Type your message</mat-label>
+          <textarea matInput [(ngModel)]="appMessages[i]" rows="8" placeholder="Type your message..."></textarea>
+          <mat-hint>Supported: JSON, XML, HTML, JS, plain text</mat-hint>
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="sendMessage(i)" [disabled]="isLoading[i]">
+          <span *ngIf="!isLoading[i]">Send</span>
+          <mat-progress-spinner *ngIf="isLoading[i]" diameter="20" mode="indeterminate"></mat-progress-spinner>
+        </button>
+        <div class="response" *ngIf="appResponses[i]">
+          <mat-icon color="primary">info</mat-icon>
+          <span>{{ appResponses[i] }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 

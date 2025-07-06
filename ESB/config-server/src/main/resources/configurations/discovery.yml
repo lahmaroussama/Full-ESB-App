@@ -1,0 +1,11 @@
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ # "eurka"outil tal9a bih les mic service mte3ek
+      # kol mic service etrbat bel eurka
+server:
+  port: 8761

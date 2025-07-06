@@ -1,0 +1,53 @@
+<div class="stack-dashboard-root">
+    <header class="stack-dashboard-header">
+        <img src="assets/images/logo/stack-logo.svg" alt="Stack Logo" class="stack-logo" onerror="this.style.display='none'; document.getElementById('stack-logo-fallback').style.display='block';">
+        <svg id="stack-logo-fallback" class="stack-logo" style="display:none" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="64" height="64" rx="16" fill="#0ea5e9"/>
+            <text x="50%" y="50%" text-anchor="middle" fill="#fff" font-size="32" font-family="Arial, Helvetica, sans-serif" dy=".35em">S</text>
+        </svg>
+        <div class="stack-title">Stack Admin Dashboard</div>
+        <div class="stack-subtitle">Manage users and admins with ease</div>
+    </header>
+
+    <section class="stack-dashboard-table-section">
+        <mat-table [dataSource]="users" class="mat-elevation-z2 stack-table">
+            <ng-container matColumnDef="name">
+                <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+                <mat-cell *matCellDef="let user">{{user.name}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="email">
+                <mat-header-cell *matHeaderCellDef>Email</mat-header-cell>
+                <mat-cell *matCellDef="let user">{{user.email}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="role">
+                <mat-header-cell *matHeaderCellDef>Role</mat-header-cell>
+                <mat-cell *matCellDef="let user">
+                    <span [ngClass]="{'role-admin': user.role === 'Admin', 'role-user': user.role === 'User'}">{{user.role}}</span>
+                </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="status">
+                <mat-header-cell *matHeaderCellDef>Status</mat-header-cell>
+                <mat-cell *matCellDef="let user">
+                    <span [ngClass]="{'status-active': user.status === 'Active', 'status-inactive': user.status === 'Inactive'}">{{user.status}}</span>
+                </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="actions">
+                <mat-header-cell *matHeaderCellDef>Actions</mat-header-cell>
+                <mat-cell *matCellDef="let user">
+                    <button mat-icon-button color="primary" (click)="editUser(user)" matTooltip="Edit">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                    <button mat-icon-button color="warn" (click)="deleteUser(user)" matTooltip="Delete">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                    <button mat-icon-button color="accent" (click)="toggleRole(user)" matTooltip="Promote/Demote">
+                        <mat-icon>{{user.role === 'Admin' ? 'person_remove' : 'person_add'}}</mat-icon>
+                    </button>
+                </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+    </section>
+</div> 

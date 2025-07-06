@@ -1,0 +1,6 @@
+package tn.besoftilys.user.entity;
+
+public enum ERole {
+    ROLE_USER,
+    ROLE_ADMIN
+}

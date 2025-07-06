@@ -1,0 +1,93 @@
+.stack-dashboard-root {
+    max-width: 1100px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 32px 0 rgba(0,0,0,0.07);
+    padding: 0 0 32px 0;
+}
+
+.stack-dashboard-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0 24px 0;
+    background: linear-gradient(90deg, #0ea5e9 0%, #38bdf8 100%);
+    border-radius: 18px 18px 0 0;
+    color: #fff;
+}
+.stack-logo {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 12px;
+}
+.stack-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 6px;
+}
+.stack-subtitle {
+    font-size: 1.2rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.stack-dashboard-table-section {
+    margin: 32px 24px 0 24px;
+}
+.stack-table {
+    width: 100%;
+    background: #f9fafb;
+    border-radius: 12px;
+    overflow: hidden;
+}
+mat-header-cell, mat-cell {
+    padding: 18px 16px;
+    font-size: 1.05rem;
+}
+mat-header-cell {
+    font-weight: 600;
+    background: #f1f5f9;
+    color: #0ea5e9;
+}
+mat-row {
+    transition: background 0.2s;
+}
+mat-row:hover {
+    background: #e0f2fe;
+}
+.role-admin {
+    color: #0ea5e9;
+    font-weight: 600;
+}
+.role-user {
+    color: #64748b;
+}
+.status-active {
+    color: #22c55e;
+    font-weight: 600;
+}
+.status-inactive {
+    color: #f87171;
+    font-weight: 600;
+}
+button[mat-icon-button] {
+    margin-right: 4px;
+}
+@media (max-width: 700px) {
+    .stack-dashboard-root {
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .stack-dashboard-table-section {
+        margin: 16px 0 0 0;
+    }
+    .stack-dashboard-header {
+        padding: 24px 0 16px 0;
+    }
+    .stack-title {
+        font-size: 1.5rem;
+    }
+} 

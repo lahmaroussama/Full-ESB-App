@@ -1,0 +1,63 @@
+<div class="flex flex-col flex-auto min-w-0">
+  <!-- Main -->
+  <div class="flex-auto p-6 sm:p-10">
+  <!-- CONTENT GOES HERE -->
+  <div class="h-400 min-h-400 max-h-400 border-2  border-gray-300 rounded-2xl">
+     <!-- datta traffic-->
+     <div class="sm:col-span-2 md:col-span-4 flex flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
+        <div class="flex flex-col sm:flex-row items-start justify-between">
+           <div class="text-lg font-medium tracking-tight leading-6 truncate">Message consumed per application</div>
+        </div>
+        <br>
+        <div class="grid grid-cols-1 ">
+         <iframe src="http://localhost:3000/d/UDdpyzz7z/prometheus-2-0-stats?orgId=1&from=now-3h&to=now&timezone=browser&refresh=1m&viewPanel=panel-32" width="1300" height="400" frameborder="0"></iframe>
+        </div>
+     </div>
+
+     <div class="flex-auto border-t -mt-px pt-4 sm:pt-6">
+      <div class="w-full max-w-screen-xl mx-auto">
+          <!-- Task distribution -->
+          <div class="sm:col-span-2 md:col-span-4 lg:col-span-2 flex flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
+            <div class="flex flex-col sm:flex-row items-start justify-between">
+                <div class="text-lg font-medium tracking-tight leading-6 truncate">Data information</div>
+            </div>
+            
+            <div class="grid grid-cols-2 border-t divide-x -m-6 mt-4 bg-gray-50 dark:bg-transparent">
+                <div class="flex flex-col items-center justify-center p-6 sm:p-8">
+                    <div class="text-5xl font-semibold leading-none tracking-tighter">
+                     <iframe src="http://localhost:3000/d/UDdpyzz7z/prometheus-2-0-stats?orgId=1&from=now-1h&to=now&timezone=browser&refresh=1m&viewPanel=panel-14" width="550" height="300" frameborder="0"></iframe>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center justify-center p-6 sm:p-8">
+                    <div class="text-5xl font-semibold leading-none tracking-tighter">
+                     <iframe src="http://localhost:3000/d/UDdpyzz7z/prometheus-2-0-stats?orgId=1&from=now-1h&to=now&timezone=browser&refresh=1m&viewPanel=panel-16" width="550" height="300" frameborder="0"></iframe>
+                    </div>
+                  <!--  <div class="mt-1 text-center text-secondary">Completed tasks</div> -->
+                </div>
+                
+            </div>
+        </div>
+       
+      </div>
+   </div>
+    <br>
+
+   <div class="sm:col-span-2 md:col-span-4 flex flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
+      <div class="flex flex-col sm:flex-row items-start justify-between">
+         <div class="text-lg font-medium tracking-tight leading-6 truncate">Data Traffic</div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 grid-flow-row gap-6 w-full mt-8 sm:mt-4"  [style.height.px]="540" >
+         <div>
+            <h2>The Input</h2>
+            <pre>{{ originalMessage }}</pre>
+         </div>
+         <div>
+            <h2>The Output</h2>
+            <pre>{{ transformedMessage }}</pre>
+         </div>
+      </div>
+   </div>
+   
+
+  </div>
+</div>
